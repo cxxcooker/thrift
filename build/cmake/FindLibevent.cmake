@@ -1,12 +1,12 @@
 # find LibEvent
 # an event notification library (http://libevent.org/)
 #
-# Usage: 
+# Usage:
 # LIBEVENT_INCLUDE_DIRS, where to find LibEvent headers
 # LIBEVENT_LIBRARIES, LibEvent libraries
 # Libevent_FOUND, If false, do not try to use libevent
 
-set(LIBEVENT_ROOT CACHE PATH "Root directory of libevent installation")
+set(LIBEVENT_ROOT /home/niuqiang/projects/speech-util/libevent-2.1.11-dist CACHE PATH "Root directory of libevent installation")
 set(LibEvent_EXTRA_PREFIXES /usr/local /opt/local "$ENV{HOME}" ${LIBEVENT_ROOT})
 foreach(prefix ${LibEvent_EXTRA_PREFIXES})
   list(APPEND LibEvent_INCLUDE_PATHS "${prefix}/include")

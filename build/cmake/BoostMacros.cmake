@@ -17,6 +17,8 @@
 # under the License.
 #
 
+set(Boost_NO_SYSTEM_PATHS ON)
+set(BOOST_ROOT /home/niuqiang/projects/speech-util/boost_1_72_0_dist)
 set(BOOST_MINREV 1.56)
 
 # we are not ready for the new style link targets introduced in

@@ -93,7 +93,7 @@ if(WITH_CPP OR WITH_C_GLIB)
 endif()
 
 # Java
-option(WITH_JAVA "Build Java Thrift library" ON)
+option(WITH_JAVA "Build Java Thrift library" OFF)
 if(ANDROID)
     find_package(Gradle QUIET)
     CMAKE_DEPENDENT_OPTION(BUILD_JAVA "Build Java library" ON
@@ -106,24 +106,24 @@ else()
 endif()
 
 # Javascript
-option(WITH_JAVASCRIPT "Build Javascript Thrift library" ON)
+option(WITH_JAVASCRIPT "Build Javascript Thrift library" OFF)
 CMAKE_DEPENDENT_OPTION(BUILD_JAVASCRIPT "Build Javascript library" ON
                        "BUILD_LIBRARIES;WITH_JAVASCRIPT;NOT WIN32; NOT CYGWIN" OFF)
 
 # NodeJS
-option(WITH_NODEJS "Build NodeJS Thrift library" ON)
+option(WITH_NODEJS "Build NodeJS Thrift library" OFF)
 CMAKE_DEPENDENT_OPTION(BUILD_NODEJS "Build NodeJS library" ON
                        "BUILD_LIBRARIES;WITH_NODEJS" OFF)
 
 # Python
-option(WITH_PYTHON "Build Python Thrift library" ON)
+option(WITH_PYTHON "Build Python Thrift library" OFF)
 find_package(PythonInterp QUIET) # for Python executable
 find_package(PythonLibs QUIET) # for Python.h
 CMAKE_DEPENDENT_OPTION(BUILD_PYTHON "Build Python library" ON
                        "BUILD_LIBRARIES;WITH_PYTHON;PYTHONINTERP_FOUND;PYTHONLIBS_FOUND" OFF)
 
 # Haskell
-option(WITH_HASKELL "Build Haskell Thrift library" ON)
+option(WITH_HASKELL "Build Haskell Thrift library" OFF)
 find_package(GHC QUIET)
 find_package(Cabal QUIET)
 CMAKE_DEPENDENT_OPTION(BUILD_HASKELL "Build GHC library" ON
